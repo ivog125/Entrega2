@@ -63,7 +63,9 @@ function mostrarCarrito() {
     });
 
     let total = carrito.reduce((acc, item) => acc + item.precio, 0);
-    prodsContainer.innerHTML += `<h3>Total: $${total}</h3>`;
+    let totalh3 = document.createElement("h3");
+    totalh3.textContent = `Total: $${total}`;
+    prodsContainer.appendChild(totalh3);
     }
     
     
